@@ -29,73 +29,56 @@
   
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
-
+  <link rel="stylesheet" href="css/custom_css.css">
 </head>
 
 <body id="body">
 
-<!-- Header Start -->
-<header class="navigation">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<!-- header Nav Start -->
-				<nav class="navbar">
-					<div class="container-fluid">
-						<!-- Brand and toggle get grouped for better mobile display -->
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							</button>
-							<a class="navbar-brand" href="index.html">
-								<img src="images/logo.png" alt="Logo">
-							</a>
-						</div>
-						<!-- Collect the nav links, forms, and other content for toggling -->
-						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-							<ul class="nav navbar-nav navbar-right">
-								<li><a href="index.html">Home</a></li>
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Portfolio <span class="ion-ios-arrow-down"></span></a>
-									<ul class="dropdown-menu">
-										<li><a href="portfolio.html">Portfolio Filter</a></li>
-										<li><a href="portfolio-single.html">Portfolio Single</a></li>
-									</ul>
-								</li>
-								<li><a href="service.html">Service</a></li>
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog <span class="ion-ios-arrow-down"></span></a>
-									<ul class="dropdown-menu">
-										<li><a href="blog-grid.html">Blog Grid</a></li>
-										<li><a href="blog-single.html">Blog Single</a></li>
-										<li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
-										<li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-										<li><a href="blog-full-width.html">Blog Full Width</a></li>
-									</ul>
-								</li>
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages <span class="ion-ios-arrow-down"></span></a>
-									<ul class="dropdown-menu">
-										<li><a href="about.html">About Us</a></li>
-										<li><a href="coming-soon.html">Coming Soon</a></li>
-										<li><a href="404.html">404 Page</a></li>
-										<li><a href="faq.html">FAQ</a></li>
-										<li><a href="pricing.html">Pricing Table</a></li>
-									</ul>
-								</li>
-								<li><a href="contact.html">Contact</a></li>
-							</ul>
-							</div><!-- /.navbar-collapse -->
-							</div><!-- /.container-fluid -->
-						</nav>
-					</div>
-				</div>
-			</div>
-			</header><!-- header close -->
-
+  <header class="navigation">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- header Nav Start -->
+          <nav class="navbar">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                  <img src="images/logo.png" alt="Logo" onmouseover="scaleUp(this)" onmouseleave="scaleDown(this)" style="width:max(10vw,100px);height:'auto';">
+                </a>
+              </div>
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                  
+                  <li><a onmouseover="scaleUp(this)" onmouseleave="scaleDown(this)"  onclick="navclick(this)" id="home"><div class="reveal-later">Home</div></a></li>
+                  <li class="dropdown">
+                    <a id="products" onmouseover="scaleUp(this)" onmouseleave="scaleDown(this)" ondblclick="navclick(this)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><div class="reveal-later">Products <span class="ion-ios-arrow-down"></span></div></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="portfolio.html">Purity Flexpack Ltd.</a></li>
+                      <li><a href="portfolio.html">Shubham Packaging</a></li>
+                      <li><a href="portfolio.html">Jigar Pallet System</a></li>
+                      <li><a href="portfolio.html">Makers Poly Shrink</a></li>
+                    </ul>
+                  </li>
+                  <li><a  id="service" onmouseover="scaleUp(this)" onmouseleave="scaleDown(this)" onclick="navclick(this)"><div class="reveal-later">Services</div></a></li>
+                  <li><a  id="clientele" onmouseover="scaleUp(this)" onmouseleave="scaleDown(this)" onclick="navclick(this)" ><div class="reveal-later">Clientele</div></a></li>
+                  <li><a  id="contact" onmouseover="scaleUp(this)" onmouseleave="scaleDown(this)" onclick="navclick(this)"><div class="reveal-later">Contact</div></a></li>
+                </ul>
+                </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+              </nav>
+            </div>
+          </div>
+        </div>
+        </header><!-- header close -->
+  
 <section class="page-title bg-2">
   <div class="container">
     <div class="row">
@@ -116,7 +99,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="block">
-          <div class="portfolio-menu">
+<!--          <div class="portfolio-menu">
             <div class="btn-group btn-group-toggle justify-content-center" data-toggle="buttons">
               <label class="btn btn-sm btn-primary active">
                 <input type="radio" name="shuffle-filter" value="all" checked="checked" />All
@@ -132,47 +115,40 @@
               </label>
             </div>
           </div>
+          -->
           <div class="row shuffle-wrapper">
-            <div class="col-md-4 portfolio-item shuffle-item" data-groups="[&quot;design&quot;]">
-              <img src="images/portfolio/work1.jpg" alt="">
-              <div class="portfolio-hover">
-                <div class="portfolio-content">
-                  <a href="images/portfolio/work1.jpg" class="portfolio-popup"><i class="icon ion-search"></i></a>
-                  <a class="h3" href="portfolio-single.html">Rio Furniture</a>
-                  <p>Labore et dolore magna aliqua. Ut enim ad </p>
+            <div class="col-md-6 portfolio-item shuffle-item" data-groups="[&quot;design&quot;]">
+              <div class="border">
+                  <div class="parallex-contain">
+                    <span>Shubham Packaging</span>
+                  </div>
+              </div>
+              </div>
+            <div class="col-md-6  portfolio-item shuffle-item" data-groups="[&quot;design&quot;]">
+              <div class="border">
+                <div class="parallex-contain">
+                  <span>Purity Flexpack Ltd.</span>
                 </div>
+            </div>
+
+              </div>
+            <div class="col-md-6  portfolio-item shuffle-item" data-groups="[&quot;design&quot;]">
+              <div class="border">
+                <div class="parallex-contain">
+                  <span>Jigar Pallet System</span>
+                </div>
+            </div>
+
+              </div>
+            <div class="col-md-6  portfolio-item shuffle-item" data-groups="[&quot;design&quot;]">
+              <div class="border">
+                <div class="parallex-contain">
+                  <span>Makers Poly Shrink</span>
+                </div>
+
               </div>
             </div>
-            <div class="col-md-4 portfolio-item shuffle-item" data-groups="[&quot;design&quot;,&quot;illustration&quot;]">
-              <img src="images/portfolio/work2.jpg" alt="">
-              <div class="portfolio-hover">
-                <div class="portfolio-content">
-                  <a href="images/portfolio/work2.jpg" class="portfolio-popup"><i class="icon ion-search"></i></a>
-                  <a class="h3" href="portfolio-single.html">Rio Furniture</a>
-                  <p>Labore et dolore magna aliqua. Ut enim ad </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 portfolio-item shuffle-item" data-groups="[&quot;illustration&quot;]">
-              <img src="images/portfolio/work3.jpg" alt="">
-              <div class="portfolio-hover">
-                <div class="portfolio-content">
-                  <a href="images/portfolio/work3.jpg" class="portfolio-popup"><i class="icon ion-search"></i></a>
-                  <a class="h3" href="portfolio-single.html">Rio Furniture</a>
-                  <p>Labore et dolore magna aliqua. Ut enim ad </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 portfolio-item shuffle-item" data-groups="[&quot;video&quot;,&quot;illustration&quot;]">
-              <img src="images/portfolio/work4.jpg" alt="">
-              <div class="portfolio-hover">
-                <div class="portfolio-content">
-                  <a href="images/portfolio/work4.jpg" class="portfolio-popup"><i class="icon ion-search"></i></a>
-                  <a class="h3" href="portfolio-single.html">Rio Furniture</a>
-                  <p>Labore et dolore magna aliqua. Ut enim ad </p>
-                </div>
-              </div>
-            </div>
+            <!--
             <div class="col-md-4 portfolio-item shuffle-item" data-groups="[&quot;design&quot;,&quot;illustration&quot;]">
               <img src="images/portfolio/work5.jpg" alt="">
               <div class="portfolio-hover">
@@ -192,7 +168,7 @@
                   <p>Labore et dolore magna aliqua. Ut enim ad </p>
                 </div>
               </div>
-            </div>
+            </div>-->
           </div>
         </div>
       </div>
@@ -248,8 +224,16 @@
     <!-- Google Map -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"></script>
     <script src="plugins/google-map/map.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script> 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/TextPlugin.min.js"></script>
 
     <script src="js/script.js"></script>
+    <script src="js/effect.js"></script>
+
+
 
     </body>
 

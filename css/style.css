@@ -917,7 +917,8 @@ font header .navbar-default .navbar-nav li a:hover {
 
 .portfolio-item {
   position: relative;
-  padding: 0;
+  padding: 1vw;
+
 }
 
 .portfolio-item img {

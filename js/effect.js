@@ -35,16 +35,6 @@ function scaleDown(elem){
     }
     );
 }
-gsap.to(".yo", {duration: 5, text: "We love the Web and the work we do.We work closely with our clients to deliver </br>  the best possible solutions for their needs.", ease:"rough",repeat: -1, repeatDelay: 1});
-
-gsap.from(".reveal-later", {
-    duration: 5,
-    xPercent : 1000,
-    ease: "power4",
-    opacity:0.1,
-  });
-
-
 
 function navclick(elem){
     navmap(elem);
@@ -128,3 +118,22 @@ function detectMob() {
         return navigator.userAgent.match(toMatchItem);
     });
   }
+
+
+gsap.to(".yo", {duration: 5, text: "We love the Web and the work we do.We work closely with our clients to deliver </br>  the best possible solutions for their needs.", ease:"rough",repeat: -1, repeatDelay: 1});
+
+gsap.from(".reveal-later", {
+    duration: 5,
+    xPercent : 1000,
+    ease: "power4",
+    opacity:0.1,
+  });
+
+/*Tilt Js */
+$('.border').tilt({
+    maxTilt: 45,
+    speed: 500,
+    perspective: 1000
+});
+
+
