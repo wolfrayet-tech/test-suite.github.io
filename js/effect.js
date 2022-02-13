@@ -1,3 +1,22 @@
+
+
+function detectMob() {
+    const toMatch = [
+        /Android/i,
+        /webOS/i,
+        /iPhone/i,
+        /iPad/i,
+        /iPod/i,
+        /BlackBerry/i,
+        /Windows Phone/i
+    ];
+    
+    return toMatch.some((toMatchItem) => {
+        return navigator.userAgent.match(toMatchItem);
+    });
+  }
+  
+
 function scaleUp(elem){
     gsap.to(elem,{
         duration:1,
@@ -32,16 +51,30 @@ gsap.from(".reveal-later", {
 
 
 function navclick(elem){
-    elem.style.position= "absolute";
+    var h = window.innerHeight/2;
+    var w = -window.innerWidth/2;
+    //window.scrollTo(0, 200);
+    //elem.style.position= "absolute";
     elem.style.zIndex="500";
+    if(detectMob()==true){
+         document.getElementsByClassName("nav navbar-nav navbar-right")[0].style.position="absolute";
+         w = -w;
+    }
     var tl = gsap.timeline({onComplete: redirect});
-    
     tl.to(elem, {
       duration: 2, 
-      attr:{
-        startOffset:'100%'
-      }
-    }) 
+    })
+    .to(window,{
+        duration:3,
+        scrollTo:200,
+    },0)
+    .to(elem,{
+        duration:2,
+        x:w,
+        y:h,
+        fontSize: 50,
+    },0) 
+
     .to(elem, {
         duration: 1.5, 
         scaleX:3,
@@ -50,12 +83,12 @@ function navclick(elem){
         yPercent:1000,
         color:"#fff",
         fontSize: 500,
-    }, 0)
-    .to("body",{
-        duration: 1.5,
+    }, 1)
+    .to(body,{
+        duration: 0.5,
         backgroundColor:"#ffffff",
         opacity:0,
-    },0);
+    },1);
 
 }
 
