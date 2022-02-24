@@ -10,6 +10,50 @@ This is a sole property of Wolf Rayet Technologies. If anyone found using the fi
 
 /* Variables */
 var nav_redirect_url="index.html";
+var num_prod = 0;
+var i = 0;
+function change(anchor){
+    anchor = anchor.id;
+    window.location = "catalogue.html?cat="+anchor;
+}
+
+
+function page_maker(){
+    let anchor = get_keys().cat;
+    console.log(anchor);
+    description: "Page not found";
+    productname: "This is a mistake";
+    switch(anchor){
+        case "spkg":
+            num_prod = 3;
+            break;
+        case "wolf":
+            description = "WOlf rayet is a shit show";
+            productname = "wolfrayet.tech";
+            break;
+        default:
+            description: "PAGE NOT FOUND";
+            productname: "Doesn't exist....yet";
+        }
+        
+        document.getElementById("dynamic").innerHTML=""
+        for(i=0;i<num_prod;i++){
+            console.log(i);
+        document.getElementById("dynamic").innerHTML+= '<div class="col-md-6">\
+        <div class="border">\
+            <div class="parallex-contain">\
+              <span>Shubham Packaging - ' + i + '</span>\
+            </div>\
+        </div>\
+        </div>'
+    }
+}
+
+function get_keys(){
+    const keys = new Proxy(new URLSearchParams(window.location.search), 
+    {get: (searchParams,prop)=>searchParams.get(prop),});
+    return keys;
+}
 
 function scaleUp(elem){
     navmap(elem);
